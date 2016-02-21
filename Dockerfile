@@ -1,7 +1,7 @@
 FROM busybox
 
-ADD src/conf.d    /etc/nginx/conf.d
-ADD src/vhost.d   /etc/nginx/vhost.d
-ADD src/templates /etc/docker-gen/templates
-ADD src/wwwroot   /usr/share/nginx/html
+COPY conf.d    /etc/nginx/conf.d
+COPY vhost.d   /etc/nginx/vhost.d
+COPY templates /etc/docker-gen/templates
+COPY wwwroot   /usr/share/nginx/html
 
